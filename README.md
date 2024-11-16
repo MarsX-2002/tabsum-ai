@@ -2,6 +2,22 @@
 
 A Chrome extension that uses Google's Gemini Pro API to provide intelligent summaries of web content with a clean, modern interface.
 
+## Screenshots
+
+Here's how TabSum AI looks in action:
+
+![TabSum AI Screenshot 1](img/1.png)
+*Initial view with summary length options*
+
+![TabSum AI Screenshot 2](img/2.png)
+*Generated summary with key points*
+
+![TabSum AI Screenshot 3](img/3.png)
+*Dark mode support*
+
+![TabSum AI Screenshot 4](img/4.png)
+*Share options for multiple platforms*
+
 ## Features
 
 - **AI-Powered Summarization**: Generate concise, intelligent summaries of any web page
