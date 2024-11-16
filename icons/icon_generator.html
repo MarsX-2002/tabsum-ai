@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Icons</title>
+    <style>
+        body { margin: 20px; font-family: Arial; background: #f5f5f5; }
+        .canvas-container { 
+            margin: 20px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button { 
+            margin: 10px;
+            padding: 8px 16px;
+            background: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1557b0;
+        }
+        canvas {
+            border: 1px solid #eee;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas-container">
+        <canvas id="icon16" width="16" height="16"></canvas>
+        <button onclick="downloadIcon(16)">Download 16x16</button>
+    </div>
+    <div class="canvas-container">
+        <canvas id="icon48" width="48" height="48"></canvas>
+        <button onclick="downloadIcon(48)">Download 48x48</button>
+    </div>
+    <div class="canvas-container">
+        <canvas id="icon128" width="128" height="128"></canvas>
+        <button onclick="downloadIcon(128)">Download 128x128</button>
+    </div>
+
+    <script>
+        function drawIcon(size) {
+            const canvas = document.getElementById(`icon${size}`);
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Background with subtle gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#1a73e8');
+            gradient.addColorStop(1, '#1557b0');
+            
+            // Add subtle shadow for depth
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
+            ctx.shadowBlur = size * 0.1;
+            ctx.shadowOffsetX = size * 0.02;
+            ctx.shadowOffsetY = size * 0.02;
+            
+            // Draw background
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.roundRect(0, 0, size, size, size * 0.2);
+            ctx.fill();
+
+            // Reset shadow
+            ctx.shadowColor = 'transparent';
+            
+            // Draw "paper" lines (summarized text representation)
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+            const lineHeight = size * 0.11;
+            const startY = size * 0.22;
+            const margin = size * 0.15;
+            const lineWidths = [0.85, 0.65, 0.75]; // Varying line lengths
+            const lineSpacing = size * 0.16; // Increased spacing
+
+            lineWidths.forEach((width, i) => {
+                // Add subtle shadow to each line
+                ctx.shadowColor = 'rgba(0, 0, 0, 0.1)';
+                ctx.shadowBlur = size * 0.04;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = size * 0.01;
+
+                ctx.beginPath();
+                ctx.roundRect(
+                    margin,
+                    startY + (i * lineSpacing),
+                    size * width - margin * 2,
+                    lineHeight,
+                    lineHeight / 2
+                );
+                ctx.fill();
+            });
+
+            // Reset shadow
+            ctx.shadowColor = 'transparent';
+
+            // Draw arrow pointing to summary
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = size * 0.06;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+
+            // Add glow effect to arrow
+            ctx.shadowColor = 'rgba(255, 255, 255, 0.3)';
+            ctx.shadowBlur = size * 0.08;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
+
+            ctx.beginPath();
+            ctx.moveTo(size * 0.3, size * 0.8);
+            ctx.lineTo(size * 0.5, size * 0.9);
+            ctx.lineTo(size * 0.7, size * 0.8);
+            ctx.stroke();
+
+            // Draw glowing dot at arrow peak
+            ctx.fillStyle = 'white';
+            ctx.beginPath();
+            ctx.arc(size * 0.5, size * 0.9, size * 0.05, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function downloadIcon(size) {
+            drawIcon(size);
+            const canvas = document.getElementById(`icon${size}`);
+            const link = document.createElement('a');
+            link.download = `icon${size}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Draw all icons initially
+        [16, 48, 128].forEach(drawIcon);
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "smart-tab-summarizer",
+  "version": "1.0.0",
+  "description": "AI-powered webpage summarizer using Google's Generative AI",
+  "type": "module",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.1.3"
+  }
+}

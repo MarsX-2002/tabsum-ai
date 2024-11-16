@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TabSum AI</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>TabSum AI</h1>
+      <p class="subtitle">Intelligent Web Content Summarizer</p>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <div class="main-content">
+      <div class="card controls">
+        <button id="summarizeBtn" class="primary-btn">
+          <i class="fas fa-magic"></i>
+          Summarize Page
+        </button>
+        <select id="summaryLength" class="length-select">
+          <option value="short">Short Summary</option>
+          <option value="medium" selected>Medium Summary</option>
+          <option value="detailed">Detailed Summary</option>
+        </select>
+      </div>
+
+      <div id="status" class="status-container">
+        <span id="statusMessage" class="status-message"></span>
+      </div>
+
+      <div id="loadingSpinner" class="spinner" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Analyzing content...</p>
+      </div>
+
+      <div id="errorContainer" class="error-container" style="display: none;">
+        <div class="error-content">
+          <i class="fas fa-exclamation-circle error-icon"></i>
+          <p id="errorMessage" class="error-text"></p>
+        </div>
+      </div>
+
+      <div id="summaryContent" class="summary-content card" style="display: none;">
+        <div class="summary-section">
+          <h2>Summary</h2>
+          <div id="summaryText" class="content-box"></div>
+        </div>
+
+        <div class="summary-section">
+          <h3>Key Points</h3>
+          <ul id="keyPoints" class="content-list"></ul>
+        </div>
+
+        <div class="summary-section">
+          <h3>Important Data</h3>
+          <ul id="importantData" class="content-list"></ul>
+        </div>
+
+        <div class="action-buttons">
+          <button id="copyBtn" class="action-btn">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+          <div class="dropdown">
+            <button id="shareBtn" class="action-btn">
+              <i class="fas fa-share-alt"></i> Share
+            </button>
+            <div class="dropdown-content">
+              <button class="share-option" data-platform="whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+              </button>
+              <button class="share-option" data-platform="telegram">
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+              </button>
+              <button class="share-option" data-platform="twitter">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+              </button>
+              <button class="share-option" data-platform="facebook">
+                <i class="fab fa-facebook"></i>
+                <span>Facebook</span>
+              </button>
+              <button class="share-option" data-platform="linkedin">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </button>
+              <button class="share-option" data-platform="email">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="toast" class="toast" style="display: none;">
+        <span id="toastMessage"></span>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
