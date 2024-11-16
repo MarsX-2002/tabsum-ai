@@ -5,7 +5,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/MarsX-2002/tabsum-ai/pulls)
 
+<div align="center">
+
+![TabSum AI Demo](docs/demo/animation.gif)
+
 > 🚀 Transform any webpage into a concise, intelligent summary with just one click! Powered by Google's Gemini Pro AI.
+
+</div>
 
 TabSum AI is a powerful Chrome extension that uses artificial intelligence to generate smart summaries of web content. Perfect for researchers, students, professionals, and anyone who wants to quickly grasp the essence of any webpage.
 
