@@ -7,7 +7,7 @@
 
 <div align="center">
 
-![TabSum AI Demo](docs/demo/animation.gif)
+![TabSum AI Demo](docs/demo/Animation.gif)
 
 > 🚀 Transform any webpage into a concise, intelligent summary with just one click! Powered by Google's Gemini Pro AI.
 
