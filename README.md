@@ -46,6 +46,37 @@ Here's how TabSum AI looks in action:
 
 </div>
 
+## 🚀 Installation Guide
+
+Since this extension is not on the Chrome Web Store, you can install it directly from GitHub:
+
+1. **Download the Extension**
+   - Click the green "Code" button above
+   - Select "Download ZIP"
+   - Extract the ZIP file to a folder on your computer
+
+2. **Install in Chrome**
+   - Open Chrome and go to `chrome://extensions/`
+   - Enable "Developer mode" in the top right corner
+   - Click "Load unpacked"
+   - Select the extracted folder
+
+3. **Configure the Extension**
+   - Create a `config.js` file in the extension directory
+   - Add your Gemini Pro API key:
+     ```javascript
+     const config = {
+         apiKey: 'YOUR_GEMINI_PRO_API_KEY'
+     };
+     ```
+   - Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+
+4. **Verify Installation**
+   - Look for the TabSum AI icon in your Chrome toolbar
+   - Click it to start summarizing web pages!
+
+> Note: When installing from GitHub, Chrome may show a warning about developer mode extensions. This is normal for locally installed extensions.
+
 ## 🚀 Quick Start
 
 ### Installation

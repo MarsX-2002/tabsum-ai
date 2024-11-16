@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "TabSum AI",
+  "version": "1.0.0",
+  "description": "AI-powered web content summarizer using Google's Gemini Pro",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tabsum-ai@example.com",
+      "strict_min_version": "57.0"
+    }
+  }
+}
