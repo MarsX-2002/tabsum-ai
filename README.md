@@ -1,10 +1,36 @@
-# TabSum AI - Intelligent Web Content Summarizer
+# TabSum AI - Intelligent Web Content Summarizer 🤖
 
-A Chrome extension that uses Google's Gemini Pro API to provide intelligent summaries of web content with a clean, modern interface.
+[![Chrome Web Store](https://img.shields.io/badge/Chrome-Extension-green.svg)](https://chrome.google.com/webstore/detail/tabsum-ai/[your-extension-id])
+[![GitHub stars](https://img.shields.io/github/stars/MarsX-2002/tabsum-ai)](https://github.com/MarsX-2002/tabsum-ai/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/MarsX-2002/tabsum-ai/pulls)
 
-## Screenshots
+> 🚀 Transform any webpage into a concise, intelligent summary with just one click! Powered by Google's Gemini Pro AI.
+
+TabSum AI is a powerful Chrome extension that uses artificial intelligence to generate smart summaries of web content. Perfect for researchers, students, professionals, and anyone who wants to quickly grasp the essence of any webpage.
+
+[🎯 Install from Chrome Web Store](#) | [📖 Read Documentation](https://github.com/MarsX-2002/tabsum-ai/wiki) | [🤝 Contribute](https://github.com/MarsX-2002/tabsum-ai/blob/main/CONTRIBUTING.md)
+
+## ✨ Key Features
+
+- 🤖 **AI-Powered Summarization**: Generate concise, intelligent summaries using Google's Gemini Pro API
+- 📊 **Multiple Summary Lengths**: Choose between short (TL;DR), medium, or detailed summaries
+- 🎯 **Key Points Extraction**: Automatically identifies and highlights main takeaways
+- 📱 **Easy Sharing**: Share summaries directly to:
+  - WhatsApp
+  - Telegram
+  - Twitter
+  - Facebook
+  - LinkedIn
+  - Email
+- 🌓 **Dark/Light Theme**: Supports both dark and light modes with system preference detection
+- 🎨 **Clean UI**: Modern, minimalist interface with Inter font
+
+## 📸 Screenshots
 
 Here's how TabSum AI looks in action:
+
+<div align="center">
 
 ![TabSum AI Screenshot 1](img/1.png)
 *Initial view with summary length options*
@@ -18,82 +44,67 @@ Here's how TabSum AI looks in action:
 ![TabSum AI Screenshot 4](img/4.png)
 *Share options for multiple platforms*
 
-## Features
+</div>
 
-- **AI-Powered Summarization**: Generate concise, intelligent summaries of any web page
-- **Multiple Summary Lengths**: Choose between short, medium, or detailed summaries
-- **Key Points Extraction**: Automatically identifies and lists key points from the content
-- **Important Data Highlighting**: Extracts and displays important data points
-- **Dark/Light Theme**: Supports both dark and light modes with system preference detection
-- **Easy Sharing**: Share summaries directly to various platforms:
-  - WhatsApp
-  - Telegram
-  - Twitter
-  - Facebook
-  - LinkedIn
-  - Email
+## 🚀 Quick Start
 
-## Installation
+### Installation
 
-1. Clone this repository or download the files
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked" and select the project directory
-5. Add your Gemini Pro API key to `config.js`
+1. Visit [TabSum AI on Chrome Web Store](#)
+2. Click "Add to Chrome"
+3. Click the TabSum AI icon in your extensions bar
+4. Start summarizing!
 
-## Usage
+### For Developers
 
-1. Click the TabSum AI extension icon while on any webpage
-2. Select your desired summary length
-3. Click "Summarize Page"
-4. View the generated summary, key points, and important data
-5. Use the copy or share buttons to share the insights
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MarsX-2002/tabsum-ai.git
+   ```
+2. Create a `config.js` file with your Gemini Pro API key
+3. Load in Chrome:
+   - Navigate to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked"
+   - Select the project directory
 
-## Project Structure
+## 🛠️ Technical Stack
 
-```
-├── manifest.json          # Extension configuration
-├── config.js             # API key configuration
-├── popup/
-│   ├── popup.html        # Extension popup interface
-│   ├── popup.css         # Styles for popup
-│   └── popup.js          # Popup functionality
-├── background.js         # Background processing
-└── README.md            # Documentation
-```
+- ⚡ Chrome Extension Manifest V3
+- 🤖 Google's Generative Language API (Gemini Pro)
+- 📱 Modern ES6+ JavaScript
+- 🎨 CSS Variables for theming
+- 🔒 Secure API key management
 
-## Technical Details
+## 🔐 Security
 
-- Built with Chrome Extension Manifest V3
-- Uses Google's Generative Language API (Gemini Pro)
-- Modern ES6+ JavaScript
-- Responsive design with CSS variables
-- Clean, minimalist UI with Inter font
-
-## Development
-
-### Prerequisites
-- Chrome Browser
-- Gemini Pro API Key
-- Basic understanding of Chrome Extension development
-
-### Setup
-1. Clone the repository
-2. Create a `config.js` file with your API key
-3. Load the extension in Chrome
-4. Start developing!
-
-## Security
-
-- API key is stored securely in a separate config file
+- API key stored securely in separate config file
 - Minimal permissions requested
 - No sensitive data retention
 - Secure message passing between components
 
-## Contributing
+## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We love your input! Check out our [Contributing Guidelines](CONTRIBUTING.md) to get started.
 
-## License
+## 📝 License
 
-MIT License - See LICENSE file for details
+MIT License - See [LICENSE](LICENSE) file for details
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=MarsX-2002/tabsum-ai&type=Date)](https://star-history.com/#MarsX-2002/tabsum-ai&Date)
+
+## 🔍 Keywords
+
+`chrome-extension`, `ai-summarizer`, `gemini-pro`, `web-content`, `text-summarization`, `productivity-tool`, `content-analysis`, `browser-extension`, `javascript`, `ai-powered`, `web-tools`
+
+---
+
+<div align="center">
+
+Made with ❤️ by [MarsX-2002](https://github.com/MarsX-2002)
+
+[Report Bug](https://github.com/MarsX-2002/tabsum-ai/issues) · [Request Feature](https://github.com/MarsX-2002/tabsum-ai/issues) · [Star on GitHub](https://github.com/MarsX-2002/tabsum-ai)
+
+</div>
